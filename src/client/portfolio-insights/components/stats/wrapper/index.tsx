@@ -6,6 +6,9 @@ type StatsWrapperProps = {
   className?: string;
 };
 
-export const StatsWrapper = ({ children, variant = 'large' }) => {
+export const StatsWrapper = ({
+  children,
+  variant = 'large',
+}: StatsWrapperProps) => {
   return <div className={cx(s.root, s[variant])}>{children}</div>;
 };

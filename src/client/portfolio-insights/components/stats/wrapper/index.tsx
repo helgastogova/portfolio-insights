@@ -1,4 +1,6 @@
+import React from 'react';
 import cx from 'classnames';
+
 import s from './stats-wrapper.module.css';
 
 type StatsWrapperProps = {
@@ -7,7 +9,7 @@ type StatsWrapperProps = {
   children: React.ReactNode;
 };
 
-export const StatsWrapper = ({
+export const StatsWrapper: React.FC<StatsWrapperProps> = ({
   variant = 'large',
   children,
   className,

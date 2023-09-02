@@ -1,3 +1,4 @@
+import React from 'react';
 import { Text } from '@ui';
 import { useBreakpoint } from '@ui/hooks';
 import s from './stats-item.module.css';
@@ -9,12 +10,12 @@ type StatsItemProps = {
   variant?: 'large' | 'small';
 };
 
-export const StatsItem = ({
+export const StatsItem: React.FC<StatsItemProps> = ({
   title,
   value,
   subTitle,
   variant = 'large',
-}: StatsItemProps) => {
+}) => {
   const { isXl, isS } = useBreakpoint();
 
   return (
@@ -42,3 +43,5 @@ export const StatsItem = ({
     </div>
   );
 };
+
+export default StatsItem;

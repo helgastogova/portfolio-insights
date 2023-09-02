@@ -1,3 +1,4 @@
+import React from 'react';
 import { IInsightInvestment } from '@client/portfolio-insights/types';
 import { Table, Text } from '@ui';
 
@@ -7,7 +8,7 @@ type StatsTableProps = {
   investments: IInsightInvestment[];
 };
 
-export const StatsTable = ({ investments }: StatsTableProps) => {
+export const StatsTable: React.FC<StatsTableProps> = ({ investments }) => {
   return (
     <>
       <Table>

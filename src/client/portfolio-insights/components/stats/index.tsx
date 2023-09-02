@@ -29,25 +29,32 @@ export const Stats = ({ items, markets }: StatsProps) => {
           title="All investments"
           value={`${totalInvested.numDeals} markets`}
           subTitle={totalInvested.numMarkets}
+          variant="large"
         />
-        <StatsItem
-          title="Top market"
-          value={topMarket.marketTagName}
-          subTitle={topMarket.numDeals}
-        />
-        <StatsItem
-          title="Top company"
-          value={topCompany.companyName}
-          subTitle={topCompany.numDeals}
-        />
+        {topMarket && (
+          <StatsItem
+            title="Top market"
+            value={topMarket.marketTagName}
+            subTitle={topMarket.numDeals}
+            variant="large"
+          />
+        )}
+        {topCompany && (
+          <StatsItem
+            title="Top company"
+            value={topCompany.companyName}
+            subTitle={topCompany.numDeals}
+            variant="large"
+          />
+        )}
       </StatsWrapper>
       <Divider className={s.smallStatDivider} />
       <StatsWrapper variant="small">
         {marketComposition.map((item, index) => {
-          const { marketId, marketTagName, percentage, numDeals } = item;
+          const { marketTagName, percentage, numDeals } = item;
           return (
             <StatsItem
-              key={`${marketId}_${index}`}
+              key={`${marketTagName}_${index}`}
               title={marketTagName}
               value={percentage + '%'}
               subTitle={numDeals}

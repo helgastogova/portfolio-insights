@@ -18,6 +18,11 @@
   line-height: 24px;
 }
 
+.heading\/xsmall {
+  font-size: 13px;
+  line-height: 20px;
+}
+
 .bold {
   font-weight: 600;
 }

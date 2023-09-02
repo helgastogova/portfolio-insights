@@ -59,7 +59,7 @@ const canculateMarketComposition = (
   marketCounts.forEach((count, market) => {
     compositions.push({
       marketTagName: market,
-      percentage: ((count / total) * 100).toFixed(1),
+      percentage: parseFloat(((count / total) * 100).toFixed(1)),
       numDeals: count,
     });
   });
@@ -71,11 +71,12 @@ const findInvestments = (
   marketData: Map<string, IMarket>,
 ): IInsightInvestment[] => {
   return investments.map((investment) => ({
+    id: investment.id,
+    marketId: investment.marketId,
     companyName: investment.companyName,
     marketTagName: marketData.get(investment.marketId)?.name,
   }));
 };
-
 export const analyzePortfolio = (
   investments: IInvestment[],
   markets: IMarket[],

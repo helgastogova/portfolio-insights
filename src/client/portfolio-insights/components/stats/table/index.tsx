@@ -1,4 +1,4 @@
-import { IInsightInvestment } from '../../types';
+import { IInsightInvestment } from '@client/portfolio-insights/types';
 import { Table, Text } from '@ui';
 
 import s from './table.module.css';

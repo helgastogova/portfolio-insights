@@ -18,10 +18,11 @@
         "name": "next"
       }
     ],
+    "baseUrl": "./",
     "paths": {
-      "@ui": ["/src/ui/index.ts"],
-      "@ui/hooks": ["/src/ui/hooks/index.ts"],
-      "@client/*": ["/src/client/*"]
+      "@ui": ["src/ui/index.ts"],
+      "@ui/hooks": ["src/ui/hooks/index.ts"],
+      "@client/*": ["src/client/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

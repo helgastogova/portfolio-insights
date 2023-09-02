@@ -15,16 +15,23 @@ export const StatsItem = ({
   subTitle,
   variant = 'large',
 }: StatsItemProps) => {
-  const { isL } = useBreakpoint();
+  const { isXl, isS } = useBreakpoint();
+
   return (
     <div className={s.root}>
-      <Text as="h2" variant="heading/small" color="grey">
+      <Text
+        as="h2"
+        variant={
+          variant === 'small' && isS ? 'heading/xsmall' : 'heading/small'
+        }
+        color="grey"
+      >
         {title}
       </Text>
       <Text
         as="h2"
         variant={
-          variant === 'large' && isL ? 'heading/large' : 'heading/medium'
+          variant === 'large' && isXl ? 'heading/large' : 'heading/medium'
         }
       >
         {value}

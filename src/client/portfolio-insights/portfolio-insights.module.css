@@ -1,0 +1,10 @@
+.root {
+  padding: 32px;
+  border: 1px solid var(--border-5);
+  border-radius: 12px;
+
+  @media (max-width: 720px) {
+    border: none;
+    padding: 0;
+  }
+}

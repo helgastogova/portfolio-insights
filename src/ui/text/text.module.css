@@ -1,0 +1,31 @@
+.body\/base {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.heading\/large {
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.heading\/medium {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.heading\/small {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.black {
+  color: var(--text-100);
+}
+
+.grey {
+  color: var(--text-70);
+}

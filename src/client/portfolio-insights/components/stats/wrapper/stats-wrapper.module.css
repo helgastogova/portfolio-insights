@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+}
+
+.large {
+  gap: 16px;
+
+  @media (max-width: 720px) {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.small {
+  gap: 10px;
+
+  @media (max-width: 1120px) {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  @media (max-width: 720px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

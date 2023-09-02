@@ -1,0 +1,15 @@
+.layout {
+  padding: 40px 80px;
+
+  @media (max-width: 1120px) {
+    padding: 40px;
+  }
+
+  @media (max-width: 720px) {
+    padding: 40px 24px;
+  }
+}
+
+.title {
+  margin-bottom: 22px;
+}

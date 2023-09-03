@@ -2,15 +2,15 @@
 
 You can run the following commands to interact with the project:
 
-- **Development Mode**:
-- ```bash
+**Development Mode**:
+```bash
   npm run dev
   ```
-- **Build Project**:
+**Build Project**:
 
-  ```bash
+```bash
   npm run build
-  ```
+```
 
 ## Live Demo
 

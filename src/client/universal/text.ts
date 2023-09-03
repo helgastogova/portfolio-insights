@@ -3,5 +3,7 @@ export function inflect(
   plural: string,
   count: number,
 ): string {
-  return count <= 1 ? singular : plural;
+  if (count === 0) return plural;
+  if (count === 1) return singular;
+  return plural;
 }

@@ -5,7 +5,7 @@ import { StatsWrapper } from './wrapper';
 import { StatsTable } from './table';
 
 import { IMarket, IInvestment } from '../../types';
-import { generatePortfolio } from '../../utils';
+import { portfolioInsights } from '../../utils';
 import { inflect } from '@client/universal/text';
 
 import s from './stats.module.css';
@@ -22,7 +22,7 @@ export const Stats = ({ items, markets }: StatsProps) => {
     topCompany,
     marketComposition,
     investments,
-  } = generatePortfolio(items, markets);
+  } = portfolioInsights(items, markets);
   return (
     <>
       <StatsWrapper>
@@ -57,11 +57,12 @@ export const Stats = ({ items, markets }: StatsProps) => {
       <StatsWrapper variant="small">
         {marketComposition.map((item, index) => {
           const { marketTagName, percentage, numDeals } = item;
+          const composePercentage = percentage ? percentage + '%' : '0.0%';
           return (
             <StatsItem
               key={`${marketTagName}_${index}`}
               title={marketTagName}
-              value={percentage + '%'}
+              value={composePercentage}
               subTitle={numDeals}
               variant="small"
             />

@@ -104,10 +104,10 @@ section {
 }
 
 body {
+  min-width: 320px;
   font-family: Inter;
   line-height: 1;
   color: var(--text-primary);
-  /* background: url('./bg.png') center top no-repeat; */
 }
 
 ol,

@@ -5,7 +5,8 @@ import { StatsWrapper } from './wrapper';
 import { StatsTable } from './table';
 
 import { IMarket, IInvestment } from '../../types';
-import { analyzePortfolio } from '../../utils';
+import { generatePortfolio } from '../../utils';
+import { inflect } from '@client/universal/text';
 
 import s from './stats.module.css';
 
@@ -21,14 +22,18 @@ export const Stats = ({ items, markets }: StatsProps) => {
     topCompany,
     marketComposition,
     investments,
-  } = analyzePortfolio(items, markets);
+  } = generatePortfolio(items, markets);
   return (
     <>
       <StatsWrapper>
         <StatsItem
           title="All investments"
-          value={`${totalInvested.numDeals} markets`}
-          subTitle={totalInvested.numMarkets}
+          value={`${totalInvested.numMarkets} ${inflect(
+            'market',
+            'markets',
+            totalInvested.numMarkets,
+          )}`}
+          subTitle={totalInvested.numDeals}
           variant="large"
         />
         {topMarket && (

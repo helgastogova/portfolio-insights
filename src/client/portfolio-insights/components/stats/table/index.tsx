@@ -20,7 +20,7 @@ export const StatsTable: React.FC<StatsTableProps> = ({ investments }) => {
           return (
             <Table.Row key={`${companyName}_${index}`}>
               <Table.Cell>
-                <Text bold variant="body/base">
+                <Text fontWidth="bold" variant="body/base">
                   {companyName}
                 </Text>
               </Table.Cell>

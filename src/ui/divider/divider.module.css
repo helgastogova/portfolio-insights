@@ -1,3 +1,5 @@
 .root {
-  border-top: 1px solid var(--border-5);
+  border: none;
+  height: 1px;
+  background: var(--border-5);
 }

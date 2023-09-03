@@ -1,25 +1,34 @@
 .root {
-  display: flex;
+  display: grid;
 }
 
 .large {
   gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  @media (max-width: 1120px) {
+    gap: 29px;
+  }
 
   @media (max-width: 720px) {
     display: grid;
+    gap: 31px;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 
 .small {
-  gap: 10px;
+  gap: 31px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 
   @media (max-width: 1120px) {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px 34px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   @media (max-width: 720px) {
+    gap: 23px 34px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

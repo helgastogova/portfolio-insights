@@ -23,14 +23,22 @@
   line-height: 20px;
 }
 
-.bold {
+.font-width-bold {
   font-weight: 600;
 }
 
-.black {
+.font-width-semibold {
+  font-weight: 500;
+}
+
+.font-width-regular {
+  font-weight: 400;
+}
+
+.color-black {
   color: var(--text-100);
 }
 
-.grey {
+.color-grey {
   color: var(--text-70);
 }

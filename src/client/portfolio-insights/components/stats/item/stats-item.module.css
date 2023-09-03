@@ -4,3 +4,9 @@
   gap: 5px;
   flex-grow: 1;
 }
+
+.small {
+  @media (max-width: 720px) {
+    gap: 3px;
+  }
+}

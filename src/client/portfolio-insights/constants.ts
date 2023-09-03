@@ -17,6 +17,16 @@ export const markets: IMarket[] = [
   { id: '13', name: 'DeFi', parentId: '12' },
   { id: '14', name: 'Space', parentId: '15' },
   { id: '15', name: 'Future Tech' },
+  // { id: '16', name: 'Test' },
+  // { id: '16', name: 'A Very long name Test, Like really long' },
+  // {
+  //   id: '17',
+  //   name: 'A Very long name Test, Like really long, what is about more letters?',
+  // },
+  // {
+  //   id: '18',
+  //   name: 'A Very long name Test, Like really long, what is about more letters? One more',
+  // },
 ];
 
 // For each investor, we have a list of the investments in their portfolio:
@@ -30,4 +40,22 @@ export const investments: IInvestment[] = [
   { id: '7', companyName: 'Rocketlabs', marketId: '14' },
   { id: '8', companyName: 'Salestech', marketId: '3' },
   { id: '9', companyName: 'Monkeycash', marketId: '10' },
+  // { id: '10', companyName: 'Text', marketId: '16' },
+  // {
+  //   id: '11',
+  //   companyName: 'A Very long name Test, Like really long',
+  //   marketId: '17',
+  // },
+  // {
+  //   id: '12',
+  //   companyName:
+  //     'A Very long name Test, Like really long, what is about more letters?',
+  //   marketId: '18',
+  // },
+  // {
+  //   id: '13',
+  //   companyName:
+  //     'A Very long name Test, Like really long, what is about more letters? One more',
+  //   marketId: '19',
+  // },
 ];

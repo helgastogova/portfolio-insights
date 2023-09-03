@@ -28,8 +28,8 @@ export function useBreakpoint() {
       const isXs = width <= 348;
       const isS = width <= 720; //note: this is the same with isM since I don't have any different styles in figma for S and M
       const isM = width <= 720;
-      const isL = width <= 1120;
-      const isXl = width > 1120; //note: this is the same as isL since I don't have any different styles in figma for L and XL
+      const isL = width < 1120;
+      const isXl = width >= 1120; //note: this is the same as isL since I don't have any different styles in figma for L and XL
 
       setBreakpoints({ isXs, isS, isM, isL, isXl });
     };

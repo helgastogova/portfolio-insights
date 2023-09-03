@@ -32,7 +32,6 @@ export interface IComposition {
 }
 
 export interface IInsightInvestment extends IInvestment {
-  companyName: string;
   marketTagName?: string;
 }
 

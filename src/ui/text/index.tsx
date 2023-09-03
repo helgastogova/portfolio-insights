@@ -1,5 +1,6 @@
 import * as React from 'react';
 import cx from 'classnames';
+
 import s from './text.module.css';
 
 type TextVariant =
@@ -17,7 +18,7 @@ interface TextProps<T extends React.ElementType = 'span'> {
   variant: TextVariant;
   color?: Color;
   className?: string;
-  bold?: boolean;
+  fontWidth?: 'regular' | 'bold' | 'semibold';
 }
 
 const Text = <T extends React.ElementType = 'span'>({
@@ -25,7 +26,7 @@ const Text = <T extends React.ElementType = 'span'>({
   children,
   className,
   variant,
-  bold,
+  fontWidth = 'regular',
   color,
   ...rest
 }: TextProps<T>) => {
@@ -33,10 +34,13 @@ const Text = <T extends React.ElementType = 'span'>({
 
   return (
     <DefaultComponent
-      className={cx(className, s.text, s[variant], {
-        [s[color || '']]: color,
-        [s.bold]: bold,
-      })}
+      className={cx(
+        className,
+        s.text,
+        s[variant],
+        color && s[`color-${color}`],
+        s[`font-width-${fontWidth}`],
+      )}
       {...rest}
     >
       {children}
